@@ -1,0 +1,212 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" media="screen"charset="utf-8">
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script>
+      var samples_list = [
+        "kick-808",
+        "clap",
+        "snare-vinyl01",
+        "kick-vinyl01",
+        "hihat-plain",
+        "snare-block",
+        "snare-noise",
+        "shaker-shuffle",
+        "tom-analog"
+      ]
+
+      var music_background = "hh-track";
+
+      function loadSound () {
+        createjs.Sound.registerSound("samples_list/kick-808.wav", samples_list[0]);
+        createjs.Sound.registerSound("samples_list/snare-vinyl01.wav", samples_list[1]);
+        createjs.Sound.registerSound("samples_list/clap.wav", samples_list[2]);
+        createjs.Sound.registerSound("samples_list/kick-vinyl01.wav", samples_list[3]);
+        createjs.Sound.registerSound("samples_list/hihat-plain.wav", samples_list[4]);
+        createjs.Sound.registerSound("samples_list/snare-block.wav", samples_list[5]);
+        createjs.Sound.registerSound("samples_list/snare-noise.wav", samples_list[6]);
+        createjs.Sound.registerSound("samples_list/shaker-shuffle.wav", samples_list[7]);
+        createjs.Sound.registerSound("samples_list/tom-analog.wav", samples_list[8]);
+        createjs.Sound.registerSound("http://res.cloudinary.com/codehunt/video/upload/v1457576486/Hip_Hop_Drumless_Backing_Track_vkxnzk.mp3", music_background );
+      }
+
+      function playSound (idx) {
+        createjs.Sound.play(samples_list[idx]);
+      }
+
+      function playTrack() {
+        createjs.Sound.play(music_background);
+      }
+
+      function stopTrack() {
+        createjs.Sound.stop();
+      }
+
+
+      // Audio Player
+      // var music = document.getElementById('music'); // id for audio element
+      //
+      // var pButton = document.getElementById('pButton'); // play button
+      //
+      // Play and Pause
+      // function play() {
+      // 	// start music
+      // 	if (music.paused) {
+      // 		music.play();
+      // 		// remove play, add pause
+      // 		pButton.className = "";
+      // 		pButton.className = "pause";
+      // 	} else { // pause music
+      // 		music.pause();
+      // 		// remove pause, add play
+      // 		pButton.className = "";
+      // 		pButton.className = "play";
+      // 	}
+      // }
+
+    </script>
+  </head>
+  <body onload="loadSound();">
+
+    <div id="mpc-border-left">
+    </div>
+        <div class="mpc-container">
+
+          <div class="pads-container">
+            <div class="under-pads-container">
+
+              <div class="container-single-pad" id="container-pad-1">
+                <div onclick="playSound(0);" class="note-key" id="pad1">
+                  <div class="lightening-dot">
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-single-pad" id="container-pad-2">
+                <div onclick="playSound(1);" class="note-key" id="pad2">
+                  <div class="lightening-dot">
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-single-pad" id="container-pad-3">
+                <div onclick="playSound(2);" class="note-key" id="pad3">
+                  <div class="lightening-dot">
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-single-pad" id="container-pad-4">
+                <div onclick="playSound(3);" class="note-key" id="pad4">
+                  <div class="lightening-dot">
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-single-pad" id="container-pad-5">
+                <div onclick="playSound(4);" class="note-key" id="pad5">
+                  <div class="lightening-dot">
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-single-pad" id="container-pad-6">
+                <div onclick="playSound(5);" class="note-key" id="pad6">
+                  <div class="lightening-dot">
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-single-pad" id="container-pad-7">
+                <div onclick="playSound(6);" class="note-key" id="pad7">
+                  <div class="lightening-dot">
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-single-pad" id="container-pad-8">
+                <div onclick="playSound(7);" class="note-key" id="pad8">
+                  <div class="lightening-dot">
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-single-pad" id="container-pad-9">
+                <div onclick="playSound(8);" class="note-key" id="pad9">
+                  <div class="lightening-dot">
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- infos box on the right -->
+          <div class="infos-box-wrapper">
+            <div class="infos-box">
+              <div class="screen">
+                <p class="screen-text">105 bpm</p>
+              </div>
+              <audio id="music" preload="true">
+                <source src="http://res.cloudinary.com/codehunt/video/upload/v1457576486/Hip_Hop_Drumless_Backing_Track_vkxnzk.mp3">
+                  <source src="http://res.cloudinary.com/codehunt/video/upload/v1457576624/Hip_Hop_Drumless_Backing_Track_oiamzk.ogg">
+                  </audio>
+                  <div id="audioplayer">
+                    <i onclick="playTrack();" class="fa fa-play fa-2x play"></i>
+                    <i onclick="stopTrack();"  class="fa fa-stop fa-2x stop"></i>
+                  </div>
+              <div class="volumes-container-fuck-red">
+                <ul class="style-btn-container">
+
+                  <li id="hh-btn" class="hh-style-btn">
+                      <p class="lighty-dot-hh"></p>
+                    </a>
+                  </li>
+                  <p id="hh">HIP-HOP</p>
+
+                  <li id="tech-btn" class="tech-style-btn">
+                      <p class="lighty-dot-techno"></p>
+                    </a>
+                  </li>
+                  <p class="tech">TECHNO</p>
+                  <p class="tech">(soon)</p>
+
+                </ul>
+
+                <div class="help-wrapper">
+                  <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+                    <label class="onoffswitch-label" for="myonoffswitch"></label>
+                  </div>
+                  <p id="help-btn">
+                    Display Help
+                  </p>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="mpc-border-right">
+    </div>
+
+  </body>
+</html>
