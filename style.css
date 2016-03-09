@@ -69,7 +69,6 @@ table {
 	background-color: #595657;
 	position: relative;
 	top: 50px;
-	/*display: inline-block;*/
 }
 
 .pads-container {
@@ -205,120 +204,6 @@ table {
 	position: relative;
 	top: 20px;
 }
-
-.volumes-container-fuck-red {
-  background-color: white	;
-}
-
-#chuck-norris {
-	/*border: red 1px solid;*/
-	/*position: relative;
-	top: 40px;*/
-	margin-top: 40%;
-}
-
-.volume-cursor1 {
-  border-radius: 50%;
-  border: 1px solid black;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 30px;
-  width: 5px;
-  height: 5px;
-	cursor: pointer;
-}
-
-.volume-cursor1:active {
-	background-color: #eee;
-}
-
-.volume-cursor2 {
-  border-radius: 50%;
-  border: 1px solid black;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 30px;
-  width: 5px;
-  height: 5px;
-  margin-top: 20px;
-	cursor: pointer;
-}
-
-.volume-cursor2:active {
-	background-color: #eee;
-}
-
-
-/*Possible volume slider*/
-
-/*#player-volume-wrapper {
-    background: rgb(17, 17, 17);
-    background: -webkit-gradient(radial, center center, 0, center center, 40%,
-    	from(rgba(100, 100, 100,0.5)), to(rgba(17, 17, 17,0))) no-repeat
-    	url(http://iviewsource.com/exercises/audioslider/images/backgroundpattern.png),
-    	rgb(17, 17, 17);
-    background: -webkit-radial-gradient(rgba(100, 100, 100,0.5),
-    	rgba(17, 17, 17,0) 40%) no-repeat,
-    	url(http://iviewsource.com/exercises/audioslider/images/backgroundpattern.png),
-    	rgb(17, 17, 17);
-    background: -moz-radial-gradient(rgba(100, 100, 100,0.5),
-    	rgba(17, 17, 17,0) 40%) no-repeat,
-    	url(http://iviewsource.com/exercises/audioslider/images/backgroundpattern.png),
-    	rgb(17, 17, 17);
-    background: -ms-radial-gradient(rgba(100, 100, 100,0.5),
-    	rgba(17, 17, 17,0) 40%) no-repeat,
-    	url(http://iviewsource.com/exercises/audioslider/images/backgroundpattern.png),
-    	rgb(17, 17, 17);
-    background: -o-radial-gradient(rgba(100, 100, 100,0.5),
-    	rgba(17, 17, 17,0) 40%) no-repeat,
-    	url(http://iviewsource.com/exercises/audioslider/images/backgroundpattern.png),
-    	rgb(17, 17, 17);
-    background: radial-gradient(rgba(100, 100, 100,0.5),
-    	rgba(17, 17, 17,0) 40%) no-repeat,
-    url(http://iviewsource.com/exercises/audioslider/images/backgroundpattern.png),
-    rgb(17, 17, 17);
-}
-
-#player {
-    width: 350px;
-    height: 50px;
-    position: relative;
-    margin: 0 auto;
-    top: 150px;
-    background: url('http://iviewsource.com/exercises/audioslider/images/volume-background.png') no-repeat left top;
-}
-
-#volume-slider {
-    position: absolute;
-    left: 24px;
-    margin: 0 auto;
-    height:15px;
-    width: 300px;
-    background: url('http://iviewsource.com/exercises/audioslider/images/volume-empty.png') no-repeat left top;
-  border: none;
-  outline: none;
-}
-
-#volume-slider .ui-slider-range-min {
-    height:15px;
-    width: 300px;
-    position: absolute;
-    background: url('http://iviewsource.com/exercises/audioslider/images/volume-full.png') no-repeat left top;
-  border: none;
-  outline: none;
-}
-
-#volume-slider .ui-slider-handle {
-    width: 38px;
-    height:39px;
-    background: url('http://iviewsource.com/exercises/audioslider/images/volume-knob.png') no-repeat left top;
-    position: absolute;
-    margin-left: -15px;
-    cursor: pointer;
-    outline: none;
-    border: none;
-}*/
-
 
 #volume-slider {
 	width: 200px;
@@ -509,9 +394,6 @@ table {
 	margin-right: auto;
 }
 
-/*input[type=checkbox] {
-	visibility: hidden;
-}*/
 
 #mpc-border-left {
 	height: 520px;
@@ -571,9 +453,6 @@ table {
 
 /* Pads */
 
-/*#pad1:after {
-	content: "Q";
-}*/
 
 .pad1-class:after {
 	position: absolute;
