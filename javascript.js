@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    // Assign a sample to each pad
     $(document).bind("keydown", function(event){
       var helper = {
         81: 0,
@@ -25,6 +26,8 @@ $(document).ready(function() {
 
     });
 
+
+    // Adapat style to pressed pads
     $(document).bind("keyup", function(event){
 
       var helper = {
@@ -46,47 +49,24 @@ $(document).ready(function() {
         $("#pad" + (index + 1).toString() + " .lightening-dot").removeClass("lightening-dot-pressed");
       }
 
-      $('#track1').click(function(){
-        $('body').addClass("yo");
-      });
-
-
     });
 
+    // Index background color to selected track
 
-    // $(".onoffswitch").click(function(){
-    //   $("#pad1").toggleClass("pad1-class:after", add);
-    //   $("#pad2").toggleClass("pad2-class:after", add);
-    //   $("#pad3").toggleClass("pad3-class:after", add);
-    //   $("#pad4").toggleClass("pad4-class:after", add);
-    //   $("#pad5").toggleClass("pad5-class:after", add);
-    //   $("#pad6").toggleClass("pad6-class:after", add);
-    //   $("#pad7").toggleClass("pad7-class:after", add);
-    //   $("#pad8").toggleClass("pad8-class:after", add);
-    //   $("#pad9").toggleClass("pad9-class:after", add);
-    // };
+    $('#track1').click(function(){
+      $(".note-key").addClass("yo-class");
+    });
+
 });
 
-
-/////////////////////// Audio player ////////////////////////
-
-// var music = document.getElementById('music'); // id for audio element
-//
-// var pButton = document.getElementById('pButton'); // play button
-//
-//
-// //Play and Pause
-// function play() {
-// 	// start music
-// 	if (music.paused) {
-// 		music.play();
-// 		// remove play, add pause
-// 		pButton.className = "";
-// 		pButton.className = "pause";
-// 	} else { // pause music
-// 		music.pause();
-// 		// remove pause, add play
-// 		pButton.className = "";
-// 		pButton.className = "play";
-// 	}
-// }
+// $(".onoffswitch").click(function(){
+//   $("#pad1").toggleClass("pad1-class:after", add);
+//   $("#pad2").toggleClass("pad2-class:after", add);
+//   $("#pad3").toggleClass("pad3-class:after", add);
+//   $("#pad4").toggleClass("pad4-class:after", add);
+//   $("#pad5").toggleClass("pad5-class:after", add);
+//   $("#pad6").toggleClass("pad6-class:after", add);
+//   $("#pad7").toggleClass("pad7-class:after", add);
+//   $("#pad8").toggleClass("pad8-class:after", add);
+//   $("#pad9").toggleClass("pad9-class:after", add);
+// };

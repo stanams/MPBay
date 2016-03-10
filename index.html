@@ -3,8 +3,9 @@
     <link rel="stylesheet" href="style.css" media="screen"charset="utf-8">
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script type="text/javascript" src="javascript.js"></script>
+    <!-- <script type="text/javascript" src="recorder.js"></script> -->
     <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -21,6 +22,11 @@
         "tom-analog"
       ]
 
+      var metronomeSounds = [
+        "metronome1",
+        "metronome2"
+      ]
+
       var music_background = "hh-track";
 
       function loadSound () {
@@ -33,7 +39,9 @@
         createjs.Sound.registerSound("samples_list/snare-noise.wav", 6);
         createjs.Sound.registerSound("samples_list/shaker-shuffle.wav", 7);
         createjs.Sound.registerSound("samples_list/tom-analog.wav", 8);
-        createjs.Sound.registerSound("http://res.cloudinary.com/codehunt/video/upload/v1457576486/Hip_Hop_Drumless_Backing_Track_vkxnzk.mp3", music_background );
+        createjs.Sound.registerSound("samples_list/metronome/metronome1.wav", 9);
+        createjs.Sound.registerSound("samples_list/metronome/metronome2.wav", 10);
+        createjs.Sound.registerSound("http://res.cloudinary.com/codehunt/video/upload/v1457576486/Hip_Hop_Drumless_Backing_Track_vkxnzk.mp3", music_background);
       }
 
       function playSound (idx) {
@@ -48,27 +56,6 @@
         createjs.Sound.stop();
       }
 
-
-      // Audio Player
-      // var music = document.getElementById('music'); // id for audio element
-      //
-      // var pButton = document.getElementById('pButton'); // play button
-      //
-      // Play and Pause
-      // function play() {
-      // 	// start music
-      // 	if (music.paused) {
-      // 		music.play();
-      // 		// remove play, add pause
-      // 		pButton.className = "";
-      // 		pButton.className = "pause";
-      // 	} else { // pause music
-      // 		music.pause();
-      // 		// remove pause, add play
-      // 		pButton.className = "";
-      // 		pButton.className = "play";
-      // 	}
-      // }
       var isPlaying = false;
       var isRecording = false;
       var startTime = null;
@@ -90,9 +77,9 @@
       function metronome(time){
         if (metronomeOn){
           if (time === 0) {
-            playSound(1);
+            playSound(9);
           } else if ([51, 101, 151].indexOf(time) > -1) {
-            playSound(2);
+            playSound(10);
           }
         }
       }
@@ -153,17 +140,9 @@
   </head>
   <body onload="loadSound();">
 
-    <ul class="trackMonitor">
-      <button id="track1" onclick="setTrack(1);"><li>Track1</li></button>
-      <button id="track2" onclick="setTrack(2);"><li>Track2</li></button>
-      <button id="track3" onclick="setTrack(3);"><li>Track3</li></button>
-      <button id="track4" onclick="setTrack(4);"><li>Track4</li></button>
-    </ul>
-
-
-    <div id="mpc-border-left">
-    </div>
         <div class="mpc-container">
+          <div id="mpc-border-left">
+          </div>
 
           <div class="pads-container">
             <div class="under-pads-container">
@@ -248,7 +227,7 @@
           <div class="infos-box-wrapper">
             <div class="infos-box">
               <div class="screen">
-                <p class="screen-text">105 bpm</p>
+                <p class="screen-text">90 bpm</p>
               </div>
               <audio id="music" preload="true">
                 <source src="http://res.cloudinary.com/codehunt/video/upload/v1457576486/Hip_Hop_Drumless_Backing_Track_vkxnzk.mp3">
@@ -289,17 +268,30 @@
             </div>
           </div>
         </div>
+        <div id="mpc-border-right">
+        </div>
       </div>
-    </div>
 
-    <div id="mpc-border-right">
-    </div>
 
-    <button onclick="handleRecord();" type="button" name="record">Start recording</button>
-    <br>
-    <button onclick="stopRecording();" type="button" name="record">Stop recording</button>
-    <br>
-    <button onclick="toggleMetronome();" type="button" name="record">toggle metronome</button>
+
+    <!-- Multitrack recorder -->
+    <section class="multitrack-recorder">
+
+      <ul class="trackMonitor">
+        <button id="track1" onclick="setTrack(1);"><li>Track1</li></button>
+        <button id="track2" onclick="setTrack(2);"><li>Track2</li></button>
+        <button id="track3" onclick="setTrack(3);"><li>Track3</li></button>
+        <button id="track4" onclick="setTrack(4);"><li>Track4</li></button>
+      </ul>
+
+      <div class="record-btns">
+        <button onclick="handleRecord();" type="button" name="record">Start recording</button>
+        <br>
+        <button onclick="stopRecording();" type="button" name="record">Stop recording</button>
+        <br>
+        <button onclick="toggleMetronome();" type="button" name="record">toggle metronome</button>
+      </div>
+    </section>
 
   </body>
 </html>
