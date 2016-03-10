@@ -507,3 +507,30 @@ table {
 	right: 55px;
 	content: "C";
 }
+
+
+/* Recorder */
+
+.trackMonitor {
+	position: absolute;
+	border: 1px black solid;
+	height: 150px;
+	width: 70px;
+	display: block;
+}
+
+.yo {
+	background-color: blue;
+}
+
+body #track2:active {
+	background-color: red;
+}
+
+body #track3:active {
+	background-color: green;
+}
+
+body #track4:active {
+	background-color: black;
+}

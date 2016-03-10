@@ -24,20 +24,20 @@
       var music_background = "hh-track";
 
       function loadSound () {
-        createjs.Sound.registerSound("samples_list/kick-808.wav", samples_list[0]);
-        createjs.Sound.registerSound("samples_list/snare-vinyl01.wav", samples_list[1]);
-        createjs.Sound.registerSound("samples_list/clap.wav", samples_list[2]);
-        createjs.Sound.registerSound("samples_list/kick-vinyl01.wav", samples_list[3]);
-        createjs.Sound.registerSound("samples_list/hihat-plain.wav", samples_list[4]);
-        createjs.Sound.registerSound("samples_list/snare-block.wav", samples_list[5]);
-        createjs.Sound.registerSound("samples_list/snare-noise.wav", samples_list[6]);
-        createjs.Sound.registerSound("samples_list/shaker-shuffle.wav", samples_list[7]);
-        createjs.Sound.registerSound("samples_list/tom-analog.wav", samples_list[8]);
+        createjs.Sound.registerSound("samples_list/kick-808.wav", 0);
+        createjs.Sound.registerSound("samples_list/snare-vinyl01.wav", 1);
+        createjs.Sound.registerSound("samples_list/clap.wav", 2);
+        createjs.Sound.registerSound("samples_list/kick-vinyl01.wav", 3);
+        createjs.Sound.registerSound("samples_list/hihat-plain.wav", 4);
+        createjs.Sound.registerSound("samples_list/snare-block.wav", 5);
+        createjs.Sound.registerSound("samples_list/snare-noise.wav", 6);
+        createjs.Sound.registerSound("samples_list/shaker-shuffle.wav", 7);
+        createjs.Sound.registerSound("samples_list/tom-analog.wav", 8);
         createjs.Sound.registerSound("http://res.cloudinary.com/codehunt/video/upload/v1457576486/Hip_Hop_Drumless_Backing_Track_vkxnzk.mp3", music_background );
       }
 
       function playSound (idx) {
-        createjs.Sound.play(samples_list[idx]);
+        createjs.Sound.play(idx);
       }
 
       function playTrack() {
@@ -69,10 +69,97 @@
       // 		pButton.className = "play";
       // 	}
       // }
+      var isPlaying = false;
+      var isRecording = false;
+      var startTime = null;
+      var timeOut;
+      var tickCount;
+      var ctsPerBeat = 200;
+      var toAdd = [];
+      var master = {1: {}, 2: {}, 3: {}, 4: {} };
+      var metronomeOn = true;
+      var track = 1;
+
+      for (var i = 0; i < ctsPerBeat; i++) {
+        master[1][i] = [];
+        master[2][i] = [];
+        master[3][i] = [];
+        master[4][i] = [];
+      }
+
+      function metronome(time){
+        if (metronomeOn){
+          if (time === 0) {
+            playSound(1);
+          } else if ([51, 101, 151].indexOf(time) > -1) {
+            playSound(2);
+          }
+        }
+      }
+
+      function advanceClock() {
+        var time = tickCount % ctsPerBeat;
+        // console.log(time);
+        metronome(time);
+
+        // if (time === 0) {
+        //   playSound(1);
+        // }
+        if (isRecording) {
+          master[track][time] = toAdd;
+          toAdd = [];
+        }
+        [1, 2, 3, 4].forEach(function(j){
+          master[j][time].forEach (function(i){
+            playSound(i);
+          })
+        })
+        tickCount += 1;
+      }
+      var handleRecord = function() {
+          isRecording = true;
+          startPlaying();
+      }
+
+      var startPlaying = function(){
+        if (!isPlaying) {
+          isPlaying = true;
+          startTime = new Date();
+          tickCount = 0;
+          advanceClock();
+          timeOut = setInterval(advanceClock, 10);
+        }
+      }
+
+      function toggleMetronome(){
+        metronomeOn = !metronomeOn;
+      }
+
+      function stopRecording(){
+        isRecording = false;
+      }
+
+      var handleNote = function (idx){
+        playSound(idx);
+      }
+
+      function setTrack(i){
+        track = i;
+        isRecording = false;
+      }
+
 
     </script>
   </head>
   <body onload="loadSound();">
+
+    <ul class="trackMonitor">
+      <button id="track1" onclick="setTrack(1);"><li>Track1</li></button>
+      <button id="track2" onclick="setTrack(2);"><li>Track2</li></button>
+      <button id="track3" onclick="setTrack(3);"><li>Track3</li></button>
+      <button id="track4" onclick="setTrack(4);"><li>Track4</li></button>
+    </ul>
+
 
     <div id="mpc-border-left">
     </div>
@@ -82,7 +169,7 @@
             <div class="under-pads-container">
 
               <div class="container-single-pad" id="container-pad-1">
-                <div onclick="playSound(0);" class="note-key" id="pad1">
+                <div onclick="handleNote(0);" class="note-key" id="pad1">
                   <div class="lightening-dot">
 
                   </div>
@@ -90,7 +177,7 @@
               </div>
 
               <div class="container-single-pad" id="container-pad-2">
-                <div onclick="playSound(1);" class="note-key" id="pad2">
+                <div onclick="handleNote(1);" class="note-key" id="pad2">
                   <div class="lightening-dot">
 
                   </div>
@@ -98,7 +185,7 @@
               </div>
 
               <div class="container-single-pad" id="container-pad-3">
-                <div onclick="playSound(2);" class="note-key" id="pad3">
+                <div onclick="handleNote(2);" class="note-key" id="pad3">
                   <div class="lightening-dot">
 
                   </div>
@@ -106,7 +193,7 @@
               </div>
 
               <div class="container-single-pad" id="container-pad-4">
-                <div onclick="playSound(3);" class="note-key" id="pad4">
+                <div onclick="handleNote(3);" class="note-key" id="pad4">
                   <div class="lightening-dot">
 
                   </div>
@@ -114,7 +201,7 @@
               </div>
 
               <div class="container-single-pad" id="container-pad-5">
-                <div onclick="playSound(4);" class="note-key" id="pad5">
+                <div onclick="handleNote(4);" class="note-key" id="pad5">
                   <div class="lightening-dot">
 
                   </div>
@@ -122,7 +209,7 @@
               </div>
 
               <div class="container-single-pad" id="container-pad-6">
-                <div onclick="playSound(5);" class="note-key" id="pad6">
+                <div onclick="handleNote(5);" class="note-key" id="pad6">
                   <div class="lightening-dot">
 
                   </div>
@@ -130,7 +217,7 @@
               </div>
 
               <div class="container-single-pad" id="container-pad-7">
-                <div onclick="playSound(6);" class="note-key" id="pad7">
+                <div onclick="handleNote(6);" class="note-key" id="pad7">
                   <div class="lightening-dot">
 
                   </div>
@@ -138,7 +225,7 @@
               </div>
 
               <div class="container-single-pad" id="container-pad-8">
-                <div onclick="playSound(7);" class="note-key" id="pad8">
+                <div onclick="handleNote(7);" class="note-key" id="pad8">
                   <div class="lightening-dot">
 
                   </div>
@@ -146,7 +233,7 @@
               </div>
 
               <div class="container-single-pad" id="container-pad-9">
-                <div onclick="playSound(8);" class="note-key" id="pad9">
+                <div onclick="handleNote(8);" class="note-key" id="pad9">
                   <div class="lightening-dot">
 
                   </div>
@@ -207,6 +294,12 @@
 
     <div id="mpc-border-right">
     </div>
+
+    <button onclick="handleRecord();" type="button" name="record">Start recording</button>
+    <br>
+    <button onclick="stopRecording();" type="button" name="record">Stop recording</button>
+    <br>
+    <button onclick="toggleMetronome();" type="button" name="record">toggle metronome</button>
 
   </body>
 </html>
