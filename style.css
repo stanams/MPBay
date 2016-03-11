@@ -508,31 +508,94 @@ table {
 	content: "C";
 }
 
-
 /* Recorder */
 
 .multitrack-recorder {
 	border: 1px black solid;
-	height: 200px;
-	width: 220px;
+	height: 450px;
+	width: 280px;
 	float: right;
-	margin-right: 80px;
-	margin-top: 130px;
+	margin-right: 40px;
+	margin-top: 80px;
 }
 
 
 .trackMonitor {
 	position: absolute;
-	border: 1px black solid;
-	height: 30px;
+	height: 280px;
 	width: 220px;
 	display: block;
-	margin-top: 170px;
+	margin-top: 160px;
 	display: inline;
+	text-align: center;
+	margin-left: 30px;
+	/*border: 1px black solid;*/
 }
 
 button:focus {outline:0;}
 
-.yo-class {
-	background-color: blue;
+.yo {
+	/*background-color: blue;*/
+}
+
+.tracks {
+	border: 1px black solid;
+}
+
+#track1 {
+	border: 1px black solid;
+	width: 180px;
+	margin: 15px auto;
+	padding: 15px;
+	border-radius: 3px;
+	font-family: Poppins;
+	cursor: pointer;
+}
+
+#track2 {
+	border: 1px black solid;
+	width: 180px;
+	margin: 15px auto;
+	padding: 15px;
+	border-radius: 3px;
+	font-family: Poppins;
+	cursor: pointer;
+}
+
+#track3 {
+	border: 1px black solid;
+	width: 180px;
+	margin: 15px auto;
+	padding: 15px;
+	border-radius: 3px;
+	font-family: Poppins;
+	cursor: pointer;
+}
+
+#track4 {
+	border: 1px black solid;
+	width: 180px;
+	margin: 15px auto;
+	padding: 15px;
+	border-radius: 3px;
+	font-family: Poppins;
+	cursor: pointer;
+}
+
+.track-selected {
+	background-color: #eee;
+}
+
+#metronome-img {
+	margin-left: 15px;
+}
+
+.metronome-wrapper {
+	margin-top: 40px;
+	margin-left: 110px;
+}
+
+.volume-icon {
+	position: relative;
+	right: 100px;
 }

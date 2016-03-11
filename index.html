@@ -278,10 +278,10 @@
     <section class="multitrack-recorder">
 
       <ul class="trackMonitor">
-        <button id="track1" onclick="setTrack(1);"><li>Track1</li></button>
-        <button id="track2" onclick="setTrack(2);"><li>Track2</li></button>
-        <button id="track3" onclick="setTrack(3);"><li>Track3</li></button>
-        <button id="track4" onclick="setTrack(4);"><li>Track4</li></button>
+        <li id="track1" class="tracks track-selected" onclick="setTrack(1);"><i class="fa fa-volume-up volume-icon"></i>Track1</li>
+        <li id="track2" class="tracks" onclick="setTrack(2);"><i class="fa fa-volume-up volume-icon"></i>Track2</li>
+        <li id="track3" class="tracks" onclick="setTrack(3);"><i class="fa fa-volume-up volume-icon"></i>Track3</li>
+        <li id="track4" class="tracks" onclick="setTrack(4);"><i class="fa fa-volume-up volume-icon"></i>Track4</li>
       </ul>
 
       <div class="record-btns">
@@ -289,7 +289,15 @@
         <br>
         <button onclick="stopRecording();" type="button" name="record">Stop recording</button>
         <br>
-        <button onclick="toggleMetronome();" type="button" name="record">toggle metronome</button>
+
+        <div conclick="toggleMetronome();" class="metronome-wrapper">
+          <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="metronome-onoffswitch">
+            <label class="onoffswitch-label" for="metronome-onoffswitch"></label>
+          </div>
+          <br>
+          <img src="/images/metronome.png" id="metronome-img" />
+
       </div>
     </section>
 

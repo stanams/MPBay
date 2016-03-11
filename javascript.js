@@ -54,7 +54,7 @@ $(document).ready(function() {
     // Index background color to selected track
 
     $('#track1').click(function(){
-      $(".note-key").addClass("yo-class");
+      $("body").addClass("yo");
     });
 
 });
