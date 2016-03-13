@@ -18,15 +18,15 @@ var metronomeSounds = [
 var music_background = "hh-track";
 
 function loadSound () {
-  createjs.Sound.registerSound("samples_list/kick-808.wav", 0);
-  createjs.Sound.registerSound("samples_list/snare-vinyl01.wav", 1);
-  createjs.Sound.registerSound("samples_list/clap.wav", 2);
-  createjs.Sound.registerSound("samples_list/kick-vinyl01.wav", 3);
-  createjs.Sound.registerSound("samples_list/hihat-plain.wav", 4);
-  createjs.Sound.registerSound("samples_list/snare-block.wav", 5);
-  createjs.Sound.registerSound("samples_list/snare-noise.wav", 6);
-  createjs.Sound.registerSound("samples_list/shaker-shuffle.wav", 7);
-  createjs.Sound.registerSound("samples_list/tom-analog.wav", 8);
+  createjs.Sound.registerSound("samples_list/drum-kit/kick-808.wav", 0);
+  createjs.Sound.registerSound("samples_list/drum-kit/snare-vinyl01.wav", 1);
+  createjs.Sound.registerSound("samples_list/drum-kit/clap.wav", 2);
+  createjs.Sound.registerSound("samples_list/drum-kit/kick-vinyl01.wav", 3);
+  createjs.Sound.registerSound("samples_list/drum-kit/hihat-plain.wav", 4);
+  createjs.Sound.registerSound("samples_list/drum-kit/snare-block.wav", 5);
+  createjs.Sound.registerSound("samples_list/drum-kit/snare-noise.wav", 6);
+  createjs.Sound.registerSound("samples_list/drum-kit/shaker-shuffle.wav", 7);
+  createjs.Sound.registerSound("samples_list/drum-kit/tom-analog.wav", 8);
   createjs.Sound.registerSound("samples_list/metronome/metronome1.wav", 9);
   createjs.Sound.registerSound("samples_list/metronome/metronome2.wav", 10);
   createjs.Sound.registerSound("http://res.cloudinary.com/codehunt/video/upload/v1457576486/Hip_Hop_Drumless_Backing_Track_vkxnzk.mp3", music_background);
@@ -77,9 +77,6 @@ function advanceClock() {
   // console.log(time);
   metronome(time);
 
-  // if (time === 0) {
-  //   playSound(1);
-  // }
   if (isRecording) {
     master[track][time] = toAdd;
     toAdd = [];

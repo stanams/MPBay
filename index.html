@@ -30,15 +30,15 @@
       var music_background = "hh-track";
 
       function loadSound () {
-        createjs.Sound.registerSound("samples_list/kick-808.wav", 0);
-        createjs.Sound.registerSound("samples_list/snare-vinyl01.wav", 1);
-        createjs.Sound.registerSound("samples_list/clap.wav", 2);
-        createjs.Sound.registerSound("samples_list/kick-vinyl01.wav", 3);
-        createjs.Sound.registerSound("samples_list/hihat-plain.wav", 4);
-        createjs.Sound.registerSound("samples_list/snare-block.wav", 5);
-        createjs.Sound.registerSound("samples_list/snare-noise.wav", 6);
-        createjs.Sound.registerSound("samples_list/shaker-shuffle.wav", 7);
-        createjs.Sound.registerSound("samples_list/tom-analog.wav", 8);
+        createjs.Sound.registerSound("samples_list/drum-kits/kick-808.wav", 0);
+        createjs.Sound.registerSound("samples_list/drum-kits/snare-vinyl01.wav", 1);
+        createjs.Sound.registerSound("samples_list/drum-kits/clap.wav", 2);
+        createjs.Sound.registerSound("samples_list/drum-kits/kick-vinyl01.wav", 3);
+        createjs.Sound.registerSound("samples_list/drum-kits/hihat-plain.wav", 4);
+        createjs.Sound.registerSound("samples_list/drum-kits/snare-block.wav", 5);
+        createjs.Sound.registerSound("samples_list/drum-kits/snare-noise.wav", 6);
+        createjs.Sound.registerSound("samples_list/drum-kits/shaker-shuffle.wav", 7);
+        createjs.Sound.registerSound("samples_list/drum-kits/tom-analog.wav", 8);
         createjs.Sound.registerSound("samples_list/metronome/metronome1.wav", 9);
         createjs.Sound.registerSound("samples_list/metronome/metronome2.wav", 10);
         createjs.Sound.registerSound("http://res.cloudinary.com/codehunt/video/upload/v1457576486/Hip_Hop_Drumless_Backing_Track_vkxnzk.mp3", music_background);
@@ -89,9 +89,6 @@
         // console.log(time);
         metronome(time);
 
-        // if (time === 0) {
-        //   playSound(1);
-        // }
         if (isRecording) {
           master[track][time] = toAdd;
           toAdd = [];
@@ -290,9 +287,9 @@
         <button onclick="stopRecording();" type="button" name="record">Stop recording</button>
         <br>
 
-        <div conclick="toggleMetronome();" class="metronome-wrapper">
+        <div class="metronome-wrapper">
           <div class="onoffswitch">
-            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="metronome-onoffswitch">
+            <input onclick="toggleMetronome();" type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="metronome-onoffswitch">
             <label class="onoffswitch-label" for="metronome-onoffswitch"></label>
           </div>
           <br>

@@ -51,22 +51,12 @@ $(document).ready(function() {
 
     });
 
-    // Index background color to selected track
+for (var i = 0; i < 5; i++) {
+  $('#track' + i.toString()).click(function(){
+    $("#track" + i.toString()).toggleClass("track-selected");
+  });
 
-    $('#track1').click(function(){
-      $("body").addClass("yo");
-    });
+}
+
 
 });
-
-// $(".onoffswitch").click(function(){
-//   $("#pad1").toggleClass("pad1-class:after", add);
-//   $("#pad2").toggleClass("pad2-class:after", add);
-//   $("#pad3").toggleClass("pad3-class:after", add);
-//   $("#pad4").toggleClass("pad4-class:after", add);
-//   $("#pad5").toggleClass("pad5-class:after", add);
-//   $("#pad6").toggleClass("pad6-class:after", add);
-//   $("#pad7").toggleClass("pad7-class:after", add);
-//   $("#pad8").toggleClass("pad8-class:after", add);
-//   $("#pad9").toggleClass("pad9-class:after", add);
-// };
