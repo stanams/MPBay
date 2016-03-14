@@ -311,6 +311,17 @@
                     <i onclick="stopTrack();"  class="fa fa-stop fa-2x stop"></i>
                   </div>
 
+
+                  <div class="metronome-wrapper">
+                    <div class="onoffswitch">
+                      <input onclick="toggleMetronome();" type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="metronome-onoffswitch">
+                      <label class="onoffswitch-label" for="metronome-onoffswitch"></label>
+                    </div>
+                    <br>
+                    <img src="/images/metronome.png" id="metronome-img" />
+
+                  </div>
+
                 <ul class="style-btn-container">
 
                   <li id="loop1" class="loop-btn first-two loop-btn-selected" onclick="setTrack(1);">
@@ -354,35 +365,10 @@
 
 
     <!-- Multitrack recorder -->
-    <section class="multitrack-recorder">
-
-      <!-- <ul class="trackMonitor">
-        <li id="track1" class="tracks" onclick="setTrack(1);"><i class="fa fa-volume-up volume-icon"></i>Track1</li>
-        <li id="track2" class="tracks" onclick="setTrack(2);"><i class="fa fa-volume-up volume-icon"></i>Track2</li>
-        <li id="track3" class="tracks" onclick="setTrack(3);"><i class="fa fa-volume-up volume-icon"></i>Track3</li>
-        <li id="track4" class="tracks" onclick="setTrack(4);"><i class="fa fa-volume-up volume-icon"></i>Track4</li>
-      </ul> -->
-
-      <div class="record-btns">
-        <!-- <button onclick="handleRecord();" type="button" name="record">Start recording</button>
-        <br>
-        <button onclick="stopRecording();" type="button" name="record">Stop recording</button>
-        <br> -->
 
         <button class="play-loop-btn" type="button" name="stopLoop" onclick="stopLoop()">STOP LOOP</button>
         <button class="stop-loop-btn" type="button" name="playLoop" onclick="playLoop()">PLAY LOOP</button>
 
-
-        <div class="metronome-wrapper">
-          <div class="onoffswitch">
-            <input onclick="toggleMetronome();" type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="metronome-onoffswitch">
-            <label class="onoffswitch-label" for="metronome-onoffswitch"></label>
-          </div>
-          <br>
-          <img src="/images/metronome.png" id="metronome-img" />
-
-      </div>
-    </section>
 
   </body>
 </html>

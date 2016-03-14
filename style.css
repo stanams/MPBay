@@ -228,7 +228,7 @@ table {
     display: block; overflow: hidden; cursor: pointer;
     height: 14px; padding: 0; line-height: 14px;
     border: 0px solid #FFFFFF; border-radius: 30px;
-    background-color: #F2EFEF;
+    background-color: #fff;
 }
 .onoffswitch-label:before {
     content: "";
@@ -357,26 +357,26 @@ table {
 #loop1 {
 	margin: 20px;
 	position: relative;
-	top: 80px;
+	top: 15px;
 }
 
 
 #loop2 {
 	margin: 20px;
 	position: relative;
-	top: 80px;
+	top: 15px;
 }
 
 #loop3 {
 	margin: 20px;
 	position: relative;
-	top: 80px;
+	top: 15px;
 }
 
 #loop4 {
 	margin: 20px;
 	position: relative;
-	top: 80px;
+	top: 15px;
 }
 
 .text-loop {
@@ -643,12 +643,12 @@ button:focus {outline:0;}
 }
 
 #metronome-img {
-	margin-right: 115px;
+	margin-left: 15px;
 }
 
 .metronome-wrapper {
-	margin-top: 40px;
-	margin-left: 110px;
+	margin-top: 80px;
+	margin-left: 75px;
 }
 
 .volume-icon {
