@@ -130,6 +130,18 @@
       function setTrack(i){
         track = i;
         isRecording = false;
+        debugger
+        for (var j = 1; j < 5; j++) {
+          debugger
+          if (j === i) {
+            $("#track" + i.toString()).addClass("track-selected");
+            [1, 2, 3, 4].forEach(function(k){
+              if (k !== i){
+                $("#track" + k.toString()).removeClass("track-selected");
+              }
+            })
+          }
+        }
       }
 
 

@@ -51,12 +51,13 @@ $(document).ready(function() {
 
     });
 
-for (var i = 0; i < 5; i++) {
-  $('#track' + i.toString()).click(function(){
-    $("#track" + i.toString()).toggleClass("track-selected");
-  });
-
-}
+  // for (var i = 1; i < 5; i++) {
+  //   debugger
+  //   $('#track' + i.toString()).click(function(){
+  //     debugger
+  //     $("#track" + i.toString()).toggleClass("track-selected");
+  //   });
+  // }
 
 
 });
