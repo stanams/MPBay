@@ -331,6 +331,17 @@ table {
 	padding: 5px;
 	border-radius: 4px;
 	cursor: pointer;
+	background-color: #D3D3D3;
+	border-bottom: 1px #696969 solid;
+}
+
+.loop-btn-selected {
+	height: 30px;
+	width: 50px;
+	margin: 60px auto 10px auto;
+	padding: 5px;
+	border-radius: 4px;
+	cursor: pointer;
 	background-color: #696969;
 	border-bottom: 1px #D3D3D3 solid;
 }
@@ -417,7 +428,7 @@ table {
 	margin: 5px;
 }
 
-.lighty-dot-techno {
+.lighty-dot {
 	height: 10px;
 	width: 10px;
 	background-color: #490808;
@@ -426,7 +437,7 @@ table {
 	margin-right: auto;
 }
 
-.lighty-dot-hh {
+.lighty-dot-selected {
 	height: 10px;
 	width: 10px;
 	background-color: red;
