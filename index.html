@@ -74,6 +74,40 @@
         master[4][i] = [];
       }
 
+      function playLoop(){
+        var time = tickCount % ctsPerBeat;
+        [1, 2, 3, 4].forEach(function(i){
+          master[i][time].forEach (function(i){
+            playSound(i);
+          })
+        })
+      };
+
+      function stopLoop(){
+        var time = tickCount % ctsPerBeat;
+        [1, 2, 3, 4].forEach(function(i){
+          master[i][time].forEach (function(i){
+              createjs.Sound.stop(i);
+          })
+        })
+        metronomeOn = false;
+      };
+
+      $(document).bind("keyup", function(event){
+        if (event.keyCode === 79) {
+          stopLoop();
+        }
+      });
+
+      $(document).bind("keyup", function(event){
+        if (event.keyCode === 80) {
+          playLoop();
+        }
+      });
+
+
+      
+
       function metronome(time){
         if (metronomeOn){
           if (time === 0) {
@@ -100,6 +134,7 @@
         })
         tickCount += 1;
       }
+
       var handleRecord = function() {
           isRecording = true;
           startPlaying();
@@ -325,6 +360,10 @@
         <br>
         <button onclick="stopRecording();" type="button" name="record">Stop recording</button>
         <br>
+
+        <button type="button" name="stopLoop" onclick="stopLoop()">STOP LOOP</button>
+        <button type="button" name="playLoop" onclick="playLoop()">PLAY LOOP</button>
+
 
         <div class="metronome-wrapper">
           <div class="onoffswitch">
