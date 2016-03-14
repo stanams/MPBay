@@ -61,7 +61,7 @@
       var startTime = null;
       var timeOut;
       var tickCount;
-      var ctsPerBeat = 200;
+      var ctsPerBeat = 200; // == 90bpm
       var toAdd = [];
       var master = {1: {}, 2: {}, 3: {}, 4: {} };
       var metronomeOn = true;
@@ -130,6 +130,7 @@
       function setTrack(i){
         track = i;
         isRecording = false;
+        handleRecord();
         debugger
         for (var j = 1; j < 5; j++) {
           debugger
@@ -143,6 +144,32 @@
           }
         }
       }
+
+      $(document).bind("keydown", function(event){
+        switch (event.keyCode){
+          case 49:
+            setTrack(1);
+            break;
+          case 50:
+            setTrack(2);
+            break;
+          case 51:
+            setTrack(3);
+            break;
+          case 52:
+            setTrack(4);
+            break;
+        }
+      });
+
+
+      $(document).bind("keydown", function(event){
+        if (event.keyCode == 32 && isRecording == true) {
+          stopRecording();
+        } else if (event.keyCode == 32 && isRecording == false) {
+          handleRecord();
+        }
+      });
 
 
     </script>
@@ -287,7 +314,7 @@
     <section class="multitrack-recorder">
 
       <ul class="trackMonitor">
-        <li id="track1" class="tracks track-selected" onclick="setTrack(1);"><i class="fa fa-volume-up volume-icon"></i>Track1</li>
+        <li id="track1" class="tracks" onclick="setTrack(1);"><i class="fa fa-volume-up volume-icon"></i>Track1</li>
         <li id="track2" class="tracks" onclick="setTrack(2);"><i class="fa fa-volume-up volume-icon"></i>Track2</li>
         <li id="track3" class="tracks" onclick="setTrack(3);"><i class="fa fa-volume-up volume-icon"></i>Track3</li>
         <li id="track4" class="tracks" onclick="setTrack(4);"><i class="fa fa-volume-up volume-icon"></i>Track4</li>
