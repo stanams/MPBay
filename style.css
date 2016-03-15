@@ -676,7 +676,7 @@ button:focus {outline:0;}
 	height: 100%;
 	width: 300px;
 	position: absolute;
-	background-color: #eee;
+	background-color: #EE2C2C;
 }
 
 #app-title {
@@ -702,7 +702,7 @@ b {
 }
 
 #instructions {
-	color: #A9A9A9;
+	color: #fff;
 }
 
 
