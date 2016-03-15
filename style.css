@@ -60,15 +60,15 @@ table {
 }
 
 .mpc-container {
-  float: left;
-	margin-left: 100px;
+  float: right;
+	margin-right: 80px;
   width: 800px;
   height: 500px;
   border: 2px black solid;
   vertical-align: middle;
 	background-color: #595657;
 	position: relative;
-	top: 50px;
+	top: 100px;
 }
 
 .pads-container {
@@ -667,4 +667,49 @@ button:focus {outline:0;}
 
 .stop-loop-btn {
 
+}
+
+
+/*----------------------Left area (explanations)-------------*/
+
+.left-area {
+	border-right: 1px black solid;
+	height: 100%;
+	width: 300px;
+	position: absolute;
+}
+
+#app-title {
+	font-family: Poppins;
+	text-align: center;
+	margin: 40px;
+	font-size: 40px;
+}
+
+
+.btns-wrapper {
+	position: absolute;
+	top: 600px;
+}
+
+
+/*-------------------------- Bass ---------------------------*/
+.bass-pic {
+	height: 600px;
+	width: 900px;
+}
+
+.chord {
+	border: 1px black solid;
+	width: 450px;
+	height: 4px;
+	position: relative;
+	bottom: 355px;
+	left: 250px;
+	margin-top: 10px;
+	background-color: black;
+}
+
+.chord:hover {
+	cursor: pointer;
 }

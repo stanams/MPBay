@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flat Bass</title>
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link rel="stylesheet" href="style.css" media="screen"charset="utf-8">
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript.js"></script>
+    <!-- <script type="text/javascript" src="recorder.js"></script> -->
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
+  </head>
+  <body>
+
+<script type="text/javascript">
+  $('#E-chord').click(function(){
+    debugger
+    $("#chord-wrapper").toggleClass("shake-trigger");
+    $("#E-chord").toggleClass("shake-vertical shake-constant");
+  });
+</script>
+
+    <div class="page-container">
+      <img class="bass-pic" src="http://res.cloudinary.com/codehunt/image/upload/v1458017269/flat-bass_vbqva6.png" />
+      <div id="chord-wrapper">
+
+        <div id="E-chord" class="chord">
+        </div>
+        <div class="chord" id="A-chord">
+        </div>
+        <div class="chord" id="D-chord">
+        </div>
+        <div class="chord" id="G-chord">
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

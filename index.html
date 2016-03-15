@@ -213,6 +213,12 @@
   </head>
   <body onload="loadSound();">
 
+    <div class="left-area">
+      <p id="app-title">
+        MPBay
+      </p>
+    </div>
+
         <div class="mpc-container">
           <div id="mpc-border-left">
           </div>
@@ -365,9 +371,10 @@
 
 
     <!-- Multitrack recorder -->
-
-        <button class="play-loop-btn" type="button" name="stopLoop" onclick="stopLoop()">STOP LOOP</button>
-        <button class="stop-loop-btn" type="button" name="playLoop" onclick="playLoop()">PLAY LOOP</button>
+        <div class="btns-wrapper">
+          <button class="play-loop-btn" type="button" name="stopLoop" onclick="stopLoop()">STOP LOOP</button>
+          <button class="stop-loop-btn" type="button" name="playLoop" onclick="playLoop()">PLAY LOOP</button>
+        </div>
 
 
   </body>
