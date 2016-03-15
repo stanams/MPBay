@@ -673,14 +673,14 @@ button:focus {outline:0;}
 /*----------------------Left area (explanations)-------------*/
 
 .left-area {
-	border-right: 1px black solid;
 	height: 100%;
 	width: 300px;
 	position: absolute;
+	background-color: #eee;
 }
 
 #app-title {
-	font-family: Poppins;
+	font-family: SkaterDudes;
 	text-align: center;
 	margin: 40px;
 	font-size: 40px;
@@ -690,6 +690,19 @@ button:focus {outline:0;}
 .btns-wrapper {
 	position: absolute;
 	top: 600px;
+}
+
+.explanations-text {
+	margin: 15px;
+	font-family: Poppins;
+}
+
+b {
+	font-weight: bold;
+}
+
+#instructions {
+	color: #A9A9A9;
 }
 
 
