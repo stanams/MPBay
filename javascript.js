@@ -59,9 +59,9 @@ $(document).ready(function() {
     // of the tutorial when clicking on the NEXT button
 
     $("#next-btn").on("click", function(){
-      $("#explanations-parag-one").replaceWith("<p class='explanations-text'>First, let's discover our instrument. Each <b style='color:#EE2C2C;'>pad</b> correspond to a specific drum set sound.</p>");
+      $("#explanations-parag-one").replaceWith("<p class='explanations-text'>First, let's discover our instrument. Each <b style='color:#EE2C2C;'>pad</b> corresponds to a specific drum sound.</p>");
       $("#explanations-parag-two").replaceWith("<p class='explanations-text'>The red pad is what we call a <b style='color:#EE2C2C;'>'kick'</b>. It's that <b style='color:#EE2C2C;'>heavy drum</b> sound that gives the <b style='color:#EE2C2C;'>tempo</b> in a lot of songs!</p>");
-      $("#instructions-content").replaceWith("<p class='explanations-text instructions-el'>Press <b style='color:#EE2C2C;'>space</b> to get the metronome, then play the <b style='color:#EE2C2C;'>kick</b> pad following the rhythm!</p>");
+      $("#instructions-content").replaceWith("<p class='explanations-text instructions-el'>Press <b style='color:#EE2C2C;'>space</b> to get the metronome running, then <b style='color:#EE2C2C;'>play the kick</b> pad following the rhythm!</p>");
       // I will add clas and remove class to the button instead
       // of changing IDs which is not good practice.
       // So let's use unique classes pour the NEXT button.
