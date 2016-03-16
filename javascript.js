@@ -58,16 +58,18 @@ $(document).ready(function() {
     // The following code stands for the different steps
     // of the tutorial when clicking on the NEXT button
 
-    $("#next-btn").on("click", function(){
-      $("#explanations-parag-one").replaceWith("<p class='explanations-text'>First, let's discover our instrument. Each <b style='color:#EE2C2C;'>pad</b> corresponds to a specific drum sound.</p>");
-      $("#explanations-parag-two").replaceWith("<p class='explanations-text'>The red pad is what we call a <b style='color:#EE2C2C;'>'kick'</b>. It's that <b style='color:#EE2C2C;'>heavy drum</b> sound that gives the <b style='color:#EE2C2C;'>tempo</b> in a lot of songs!</p>");
-      $("#instructions-content").replaceWith("<p class='explanations-text instructions-el'>Press <b style='color:#EE2C2C;'>space</b> to get the metronome running, then <b style='color:#EE2C2C;'>play the kick</b> pad following the rhythm!</p>");
-      // I will add clas and remove class to the button instead
-      // of changing IDs which is not good practice.
-      // So let's use unique classes pour the NEXT button.
+    $(".step-pivot").on("click", function(){
+      $(".explanations-parag-one-0").replaceWith("<p class='explanations-text explanations-parag-one-1'>First, let's discover our instrument. Each <b style='color:#EE2C2C;'>pad</b> corresponds to a specific drum sound.</p>");
+      $(".explanations-parag-two-0").replaceWith("<p class='explanations-text explanations-parag-two-1'>The red pad is what we call a <b style='color:#EE2C2C;'>'kick'</b>. It's that <b style='color:#EE2C2C;'>heavy drum</b> sound that gives the <b style='color:#EE2C2C;'>tempo</b> in a lot of songs!</p>");
+      $(".instructions-content-0").replaceWith("<p class='explanations-text instructions-el instructions-content-1'>Press <b style='color:#EE2C2C;'>space</b> to get the metronome running, then <b style='color:#EE2C2C;'>play the kick</b> pad following the rhythm!</p>");
+      $(".step-pivot").addClass("step-one");
+      $(".step-pivot").removeClass("step-zero");
     });
 
-    $("#next-btn-2").on("click", function(){
-      $("#explanations-parag-one").replaceWith("<p class='explanations-text'>fok</p>");
+    $(".step-one").on("click", function(){
+      debugger
+      // this is not even reached
+      $("explanations-parag-one-1").replaceWith("bouh");
     });
+
 });
