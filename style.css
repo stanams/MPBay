@@ -676,7 +676,7 @@ button:focus {outline:0;}
 	height: 100%;
 	width: 300px;
 	position: absolute;
-	background-color: #C87B25;
+	background-color: #EAB435;
 }
 
 #app-title {
@@ -686,6 +686,9 @@ button:focus {outline:0;}
 	font-size: 40px;
 }
 
+#app-title:hover {
+	cursor: pointer;
+}
 
 .btns-wrapper {
 	position: absolute;
@@ -701,13 +704,16 @@ b {
 	font-weight: bold;
 }
 
-#instructions {
-	color: #A9A9A9;
+.instructions-el {
+	color: #fff;
+}
+
+#instructions-content {
 }
 
 .next-button {
 	border-radius: 20px;
-	background-color: #eee;
+	background-color: #EE2C2C;
 	width: 70px;
 	height: 40px;
 	text-align: center;
@@ -715,10 +721,11 @@ b {
 	margin-right: auto;
 	margin-top: 70px;
 	cursor: pointer;
+	border-bottom: 2px solid #821717;
 }
 
 .next-button:hover {
-	background-color: #ddd;
+	background-color: rgba(238, 44, 44, 0.8);
 }
 
 .text-next-button {
@@ -726,6 +733,7 @@ b {
 	top: 12px;
 	font-family: Poppins;
 	font-size: 14px;
+	color: #fff;
 }
 
 

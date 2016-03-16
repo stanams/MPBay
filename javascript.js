@@ -51,13 +51,17 @@ $(document).ready(function() {
 
     });
 
-  // for (var i = 1; i < 5; i++) {
-  //   debugger
-  //   $('#track' + i.toString()).click(function(){
-  //     debugger
-  //     $("#track" + i.toString()).toggleClass("track-selected");
-  //   });
-  // }
+    $("#app-title").click(function(){
+      location.reload();
+    });
 
+    // The following code stands for the different steps
+    // of the tutorial when clicking on the NEXT button
+
+    $("#next-btn").on("click", function(){
+      $("#explanations-parag-one").replaceWith("<p class='explanations-text'>First, let's discover our instrument. Each <b style='color:#EE2C2C;'>pad</b> correspond to a specific drum set sound.</p>");
+      $("#explanations-parag-two").replaceWith("<p class='explanations-text'>The red pad is what we call a <b style='color:#EE2C2C;'>'kick'</b>. It's that <b style='color:#EE2C2C;'>heavy drum</b> sound that gives the <b style='color:#EE2C2C;'>tempo</b> in a lot of songs!</p>");
+      $("#instructions-content").replaceWith("<p class='explanations-text instructions-el'>Press <b style='color:#EE2C2C;'>space</b> to get the metronome, then play the <b style='color:#EE2C2C;'>kick</b> pad following the rhythm!</p>");
+    });
 
 });
