@@ -84,13 +84,8 @@
       };
 
       function stopLoop(){
-        var time = tickCount % ctsPerBeat;
-        [1, 2, 3, 4].forEach(function(i){
-          master[i][time].forEach (function(i){
-              createjs.Sound.stop(i);
-          })
-        })
-        metronomeOn = false;
+        // metronomeOn = false;
+        // createjs.Sound.stop();
       };
 
       $(document).bind("keyup", function(event){
@@ -166,9 +161,9 @@
         track = i;
         isRecording = false;
         handleRecord();
-        debugger
+        // debugger
         for (var j = 1; j < 5; j++) {
-          debugger
+          // debugger
           if (j === i) {
             $("#loop" + i.toString()).addClass("loop-btn-selected");
             $("#lighty-dot-" + i.toString()).addClass("lighty-dot-selected");
@@ -213,16 +208,17 @@
   </head>
   <body onload="loadSound();">
 
-    <div class="left-area">
-      <p id="app-title">
+    <!-- Step Zero -->
+    <div class="left-area" id="step-zero">
+      <p class="app-title">
         MPBay
       </p>
       <br>
-      <p class='explanations-text explanations-parag-one-0'>
+      <p class='explanations-text'>
         MPBay is a virtual <b style="color:#EE2C2C;">loop machine</b> to make <b style="color:#EE2C2C;">awesome and colorful</b> beat samples!
       </p>
       <br>
-      <p class='explanations-text explanations-parag-two-0'>
+      <p class='explanations-text'>
         Let's discover your new instrument and make some <b style="color:#EE2C2C;">cool loops</b>.
       </p>
       <br>
@@ -230,15 +226,124 @@
       <p class='explanations-text instructions-el'>
         Instructions:
       </p>
-      <p class='explanations-text instructions-el instructions-content-0'>
+      <p class='explanations-text instructions-el'>
         Try to play some sounds by pressing the <b style="color:#EE2C2C;">indicated keys</b>.
       </p>
-      <div class="next-button step-zero step-pivot">
+      <div class="next-button" id="next-step-zero">
         <p class="text-next-button">
           Next
         </p>
       </div>
     </div>
+
+
+    <!-- Step 1 -->
+    <div class="left-area" id="step-one">
+
+      <p class="app-title">
+        MPBay
+      </p>
+        <br>
+      <p class='explanations-text'>First, let's discover our instrument. Each <b style='color:#EE2C2C;'>pad</b> corresponds to a specific drum sound.</p>
+        <br>
+      <p class='explanations-text'>The red pad is what we call a <b style='color:#EE2C2C;'>'kick'</b>. It's that <b style='color:#EE2C2C;'>heavy drum</b> sound that gives the <b style='color:#EE2C2C;'>tempo</b> in a lot of songs!</p>
+        <br>
+        <br>
+      <p class='explanations-text instructions-el'>
+        Instructions:
+      </p>
+      <p class='explanations-text instructions-el'>Press <b style='color:#EE2C2C;'>space</b> to get the metronome running, then <b style='color:#EE2C2C;'>play the kick</b> pad following the rhythm!</p>
+      <div class="next-button">
+        <p class="text-next-button" id="next-step-one">
+          Next
+        </p>
+      </div>
+    </div>
+
+
+
+    <!-- Step 2 -->
+    <div class="left-area" id="step-two">
+
+      <p class="app-title">
+        MPBay
+      </p>
+        <br>
+      <p class='explanations-text'>The orange pads represent the <b style='color:#EE2C2C;'>snare</b>. It goes very well when played <b style='color:#EE2C2C;'>between kick sounds!</b></p>
+        <br>
+      <p class='explanations-text instructions-el'>
+        Instructions:
+      </p>
+      <p class='explanations-text instructions-el'>Make a sequence that is <b style='color:#EE2C2C;'>kick-snare-kick-snare</b> and keep following the rhythm (you can turn the metronome off whenever you want).</p>
+      <div class="next-button">
+        <p class="text-next-button" id="next-step-two">
+          Next
+        </p>
+      </div>
+    </div>
+
+
+    <!-- Step 3 -->
+    <div class="left-area" id="step-three">
+
+      <p class="app-title">
+        MPBay
+      </p>
+        <br>
+      <p class='explanations-text'>The yellow pads are the <b style='color:#EE2C2C;'>hi-hats</b>, and other <b style='color:#EE2C2C;'>symbals sounds</b>. Play with them!</p>
+        <br>
+      <p class='explanations-text instructions-el'>
+        Instructions:
+      </p>
+      <p class='explanations-text instructions-el'>Click on number 3 to launch our <b style='color:#EE2C2C;'>third loop</b>, add some hi-hats to your track as before, <b style='color:#EE2C2C;'>you know the music now :)</b></p>
+      <div class="next-button">
+        <p class="text-next-button" id="next-step-three">
+          Next
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="left-area" id="step-four">
+
+      <p class="app-title">
+        MPBay
+      </p>
+        <br>
+      <p class='explanations-text'>The 2 white pads are a classic hip hop <b style='color:#EE2C2C;'>clap</b> and a big noisey <b style='color:#EE2C2C;'>tom</b>.</p>
+        <br>
+      <p class='explanations-text instructions-el'>
+        Instructions:
+      </p>
+      <p class='explanations-text instructions-el'>On loop 4, <b style='color:#EE2C2C;'>add a clap</b> or a tom (or both!) on the recording.</b></p>
+      <div class="next-button">
+        <p class="text-next-button" id="next-step-four">
+          Next
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="left-area" id="step-five">
+
+      <p class="app-title">
+        MPBay
+      </p>
+        <br>
+      <p class='explanations-text'>A proper hip-hop loop must have some cool <b style='color:#EE2C2C;'>vocal and scratch samples</b>. Here are some to <b style='color:#EE2C2C;'>master your beat!</b></p>
+        <br>
+      <p class='explanations-text instructions-el'>
+        Instructions:
+      </p>
+      <p class='explanations-text instructions-el'>Damn! You don't have any loop left, just <b style='color:#EE2C2C;'>add the new sounds live</b> while your loop is playing!</p>
+      <div class="next-button">
+        <p class="text-next-button" id="next-step-five">
+          Next
+        </p>
+      </div>
+    </div>
+
+
 
         <div class="mpc-container">
           <div id="mpc-border-left">

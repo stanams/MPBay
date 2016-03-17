@@ -679,14 +679,14 @@ button:focus {outline:0;}
 	background-color: #EAB435;
 }
 
-#app-title {
+.app-title {
 	font-family: SkaterDudes;
 	text-align: center;
 	margin: 40px;
 	font-size: 40px;
 }
 
-#app-title:hover {
+.app-title:hover {
 	cursor: pointer;
 }
 
@@ -708,8 +708,6 @@ b {
 	color: #fff;
 }
 
-#instructions-content {
-}
 
 .next-button {
 	border-radius: 20px;
@@ -717,11 +715,11 @@ b {
 	width: 70px;
 	height: 40px;
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
 	margin-top: 70px;
 	cursor: pointer;
 	border-bottom: 2px solid #821717;
+	position: absolute;
+	margin-left: 110px;
 }
 
 .next-button:hover {
@@ -735,6 +733,27 @@ b {
 	font-size: 14px;
 	color: #fff;
 }
+
+#step-one {
+	z-index: -1;
+}
+
+#step-two {
+	z-index: -1;
+}
+
+#step-three {
+	z-index: -1;
+}
+
+#step-four {
+	z-index: -1;
+}
+
+#step-five {
+	z-index: -1;
+}
+
 
 
 /*-------------------------- Bass ---------------------------*/
