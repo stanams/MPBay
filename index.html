@@ -11,15 +11,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script>
       var samples_list = [
-        "kick-808",
-        "clap",
-        "snare-vinyl01",
         "kick-vinyl01",
+        "snare-vinyl01",
         "hihat-plain",
-        "snare-block",
-        "snare-noise",
-        "shaker-shuffle",
-        "tom-analog"
+        "hihat2",
+        "clap",
+        "tom-analog",
+        "scratch1",
+        "scratch2",
+        "vocal_good2"
       ]
 
       var metronomeSounds = [
@@ -30,15 +30,15 @@
       var music_background = "hh-track";
 
       function loadSound () {
-        createjs.Sound.registerSound("samples_list/drum-kits/kick-808.wav", 0);
+        createjs.Sound.registerSound("samples_list/drum-kits/kick-vinyl01.wav", 0);
         createjs.Sound.registerSound("samples_list/drum-kits/snare-vinyl01.wav", 1);
-        createjs.Sound.registerSound("samples_list/drum-kits/clap.wav", 2);
-        createjs.Sound.registerSound("samples_list/drum-kits/kick-vinyl01.wav", 3);
-        createjs.Sound.registerSound("samples_list/drum-kits/hihat-plain.wav", 4);
-        createjs.Sound.registerSound("samples_list/drum-kits/snare-block.wav", 5);
-        createjs.Sound.registerSound("samples_list/drum-kits/snare-noise.wav", 6);
-        createjs.Sound.registerSound("samples_list/drum-kits/shaker-shuffle.wav", 7);
-        createjs.Sound.registerSound("samples_list/drum-kits/tom-analog.wav", 8);
+        createjs.Sound.registerSound("samples_list/drum-kits/hihat-plain.wav", 2);
+        createjs.Sound.registerSound("samples_list/drum-kits/hihat2.wav", 3);
+        createjs.Sound.registerSound("samples_list/drum-kits/clap.wav", 4);
+        createjs.Sound.registerSound("samples_list/drum-kits/tom-analog.wav", 5);
+        createjs.Sound.registerSound("samples_list/drum-kits/scratch1.wav", 6);
+        createjs.Sound.registerSound("samples_list/drum-kits/scratch2.wav", 7);
+        createjs.Sound.registerSound("samples_list/drum-kits/vocal_good2.wav", 8);
         createjs.Sound.registerSound("samples_list/metronome/metronome1.wav", 9);
         createjs.Sound.registerSound("samples_list/metronome/metronome2.wav", 10);
         createjs.Sound.registerSound("http://res.cloudinary.com/codehunt/video/upload/v1457576486/Hip_Hop_Drumless_Backing_Track_vkxnzk.mp3", music_background);
