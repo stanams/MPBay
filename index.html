@@ -151,6 +151,7 @@
 
       function stopRecording(){
         isRecording = false;
+        $(".display-rec").toggle();
       }
 
       var handleNote = function (idx){
@@ -353,6 +354,9 @@
 
 
 
+    <div class="display-rec">
+      <i class="fa fa-circle"></i> Rec
+    </div>
         <div class="mpc-container">
           <div id="mpc-border-left">
           </div>

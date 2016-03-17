@@ -776,6 +776,14 @@ b {
 }
 
 
+.display-rec {
+	color: red;
+	position: absolute;
+	left: 55%;
+	top: 30px;
+	font-family: Orbitron;
+	font-size: 40px;
+}
 
 /*-------------------------- Bass ---------------------------*/
 .bass-pic {
