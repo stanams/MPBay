@@ -738,6 +738,27 @@ b {
 	z-index: -1;
 }
 
+.step-one-pad-background {
+	background-color: red;
+}
+
+.step-two-pad-background {
+	background-color: orange;
+}
+
+.step-three-pad-background {
+	background-color: yellow;
+}
+
+.step-four-pad-background {
+	background-color: white;
+}
+
+.step-five-pad-background {
+	background-color: #2B78E4;
+}
+
+
 #step-two {
 	z-index: -1;
 }

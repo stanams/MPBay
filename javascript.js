@@ -58,27 +58,39 @@ $(document).ready(function() {
     // The following code stands for the different steps
     // of the tutorial when clicking on the NEXT button
 
-    var count = 0;
-
-
     $("#next-step-zero").on("click", function(){
       $("#step-one").css("z-index", 2);
+      $('#pad1').addClass("step-one-pad-background");
     });
 
     $("#next-step-one").on("click", function(){
       $("#step-two").css("z-index", 3);
+      $('#pad1').removeClass("step-one-pad-background");
+      $('#pad2').addClass("step-two-pad-background");
     });
 
     $("#next-step-two").on("click", function(){
       $("#step-three").css("z-index", 4);
+      $('#pad3').addClass("step-three-pad-background");
+      $('#pad4').addClass("step-three-pad-background");
+      $('#pad2').removeClass("step-two-pad-background");
     });
 
     $("#next-step-three").on("click", function(){
       $("#step-four").css("z-index", 5);
+      $('#pad5').addClass("step-four-pad-background");
+      $('#pad6').addClass("step-four-pad-background");
+      $('#pad3').removeClass("step-three-pad-background");
+      $('#pad4').removeClass("step-three-pad-background");
     });
 
     $("#next-step-four").on("click", function(){
       $("#step-five").css("z-index", 6);
+      $('#pad5').removeClass("step-four-pad-background");
+      $('#pad6').removeClass("step-four-pad-background");
+      $('#pad7').addClass("step-five-pad-background");
+      $('#pad8').addClass("step-five-pad-background");
+      $('#pad9').addClass("step-five-pad-background");
     });
 
 
