@@ -97,7 +97,6 @@ $(document).ready(function() {
     });
 
     $("#help-icon").on("click", function(){
-      $('#pad1').addClass("step-one-pad-background");
       for (var i = 0; i < 10; i++) {
         $('.pad' + i.toString() + '-class-key').toggle();
       }
