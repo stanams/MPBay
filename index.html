@@ -133,6 +133,8 @@
       var handleRecord = function() {
           isRecording = true;
           startPlaying();
+          $("#rec-button").addClass('display-rec');
+          $("#rec-button").removeClass('display-rec-default');
       }
 
       var startPlaying = function(){
@@ -151,7 +153,8 @@
 
       function stopRecording(){
         isRecording = false;
-        $(".display-rec").toggle();
+        $("#rec-button").removeClass('display-rec');
+        $("#rec-button").addClass('display-rec-default');
       }
 
       var handleNote = function (idx){
@@ -161,7 +164,7 @@
       function setTrack(i){
         track = i;
         isRecording = false;
-        handleRecord();
+        // handleRecord();
         // debugger
         for (var j = 1; j < 5; j++) {
           // debugger
@@ -226,7 +229,7 @@
         Instructions:
       </p>
       <p class='explanations-text instructions-el'>
-        Try to play some sounds by hitting the <b style="color:#EE2C2C;">corresponding keys</b> on your keyboard.
+        Play some sounds by hitting the <b style="color:#EE2C2C;">corresponding keys</b> on your keyboard.
       </p>
       <div class="next-button" id="next-step-zero">
         <p class="text-next-button">
@@ -252,7 +255,7 @@
       </p>
       <p class='explanations-text instructions-el'>1. Hit <b style='color:#EE2C2C;'>space</b> to get the recorder running. What you hear is called the <b style='color:#EE2C2C;'>metronome</b>, it gives you the rhythm!</p>
       <p class='explanations-text instructions-el'>2. Play the kick pad <b style='color:#EE2C2C;'>each 2 counts of metronome</b>.</p>
-      <p class='explanations-text instructions-el'>3. Once you have it, right after your last kick, <b style='color:#EE2C2C;'>hit space again</b> to stop recording the loop.</p>
+      <p class='explanations-text instructions-el'>3. Right after your last kick, <b style='color:#EE2C2C;'>hit space again</b> to stop recording the loop.</p>
       <div class="next-button">
         <p class="text-next-button" id="next-step-one">
           Next
@@ -354,7 +357,7 @@
 
 
 
-    <div class="display-rec">
+    <div class="display-rec-default" id="rec-button">
       <i class="fa fa-circle"></i> Rec
     </div>
         <div class="mpc-container">

@@ -831,6 +831,15 @@ b {
 	font-size: 40px;
 }
 
+.display-rec-default {
+	color: white;
+	position: absolute;
+	left: 55%;
+	top: 30px;
+	font-family: Orbitron;
+	font-size: 40px;
+}
+
 /*-------------------------- Bass ---------------------------*/
 .bass-pic {
 	height: 600px;
