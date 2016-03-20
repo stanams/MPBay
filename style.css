@@ -506,58 +506,103 @@ table {
 /* Pads */
 
 
-.pad1-class:after {
+.pad1-class-key {
 	position: absolute;
-	content: "Q";
-	right: 53px;
+	top: 80px;
+	font-family: Poppins;
+	left: 85px;
+	border-radius: 4px;
+	background-color: black;
+	color: white;
+	padding: 4px;
 }
 
-.pad2-class:after {
+.pad2-class-key {
 	position: absolute;
-	content: "W";
-	right: 51px;
+	top: 80px;
+	font-family: Poppins;
+	left: 240px;
+	border-radius: 4px;
+	background-color: black;
+	color: white;
+	padding: 4px;
 }
 
-.pad3-class:after {
+.pad3-class-key {
 	position: absolute;
-	content: "E";
-	right: 55px;
+	top: 80px;
+	font-family: Poppins;
+	left: 400px;
+	border-radius: 4px;
+	background-color: black;
+	color: white;
+	padding: 4px;
 }
 
-.pad4-class:after {
+.pad4-class-key {
 	position: absolute;
-	content: "A";
-	right: 55px;
+	top: 210px;
+	font-family: Poppins;
+	left: 85px;
+	border-radius: 4px;
+	background-color: black;
+	color: white;
+	padding: 4px;
 }
 
-.pad5-class:after {
+.pad5-class-key {
 	position: absolute;
-	content: "S";
-	right: 55px;
+	top: 210px;
+	font-family: Poppins;
+	left: 245px;
+	border-radius: 4px;
+	background-color: black;
+	color: white;
+	padding: 4px;
 }
 
-.pad6-class:after {
+.pad6-class-key {
 	position: absolute;
-	content: "D";
-	right: 55px;
+	top: 210px;
+	font-family: Poppins;
+	left: 400px;
+	border-radius: 4px;
+	background-color: black;
+	color: white;
+	padding: 4px;
 }
 
-.pad7-class:after {
+.pad7-class-key {
 	position: absolute;
-	content: "Z";
-	right: 55px;
+	top: 350px;
+	font-family: Poppins;
+	left: 85px;
+	border-radius: 4px;
+	background-color: black;
+	color: white;
+	padding: 4px;
 }
 
-.pad8-class:after {
+.pad8-class-key {
 	position: absolute;
-	content: "X";
-	right: 55px;
+	top: 350px;
+	font-family: Poppins;
+	left: 245px;
+	border-radius: 4px;
+	background-color: black;
+	color: white;
+	padding: 4px;
 }
 
-.pad9-class:after {
+.pad9-class-key {
 	position: absolute;
-	right: 55px;
-	content: "C";
+	top: 350px;
+	font-family: Poppins;
+	left: 400px;
+	border-radius: 4px;
+	background-color: black;
+	color: white;
+	padding: 4px;
 }
 
 /* Recorder */
