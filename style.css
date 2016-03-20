@@ -786,44 +786,44 @@ b {
 	color: #fff;
 }
 
-#step-one {
+#step-1 {
 	z-index: -1;
 }
 
-.step-one-pad-background {
+.step-1-pad-background {
 	background-color: red;
 }
 
-.step-two-pad-background {
+.step-2-pad-background {
 	background-color: orange;
 }
 
-.step-three-pad-background {
+.step-3-pad-background {
 	background-color: yellow;
 }
 
-.step-four-pad-background {
+.step-4-pad-background {
 	background-color: brown;
 }
 
-.step-five-pad-background {
+.step-5-pad-background {
 	background-color: #2B78E4;
 }
 
 
-#step-two {
+#step-2 {
 	z-index: -1;
 }
 
-#step-three {
+#step-3 {
 	z-index: -1;
 }
 
-#step-four {
+#step-4 {
 	z-index: -1;
 }
 
-#step-five {
+#step-5 {
 	z-index: -1;
 }
 
