@@ -864,6 +864,10 @@ a:hover {
 	border-bottom-color: #EE2C2C;
 }
 
+#help-icon-left {
+	color: black;
+}
+
 /*-------------------------- Bass ---------------------------*/
 .bass-pic {
 	height: 600px;
