@@ -91,6 +91,13 @@ $(document).ready(function() {
       $('#pad9').addClass("step-5-pad-background");
     });
 
+    $("#next-step-5").on("click", function(){
+      $("#step-6").css("z-index", 7);
+      $('#pad7').removeClass("step-5-pad-background");
+      $('#pad8').removeClass("step-5-pad-background");
+      $('#pad9').removeClass("step-5-pad-background");
+    });
+
 
     // Keys helper icon
     $("#help-icon").on("click", function(){

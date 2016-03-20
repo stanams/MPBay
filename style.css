@@ -827,6 +827,10 @@ b {
 	z-index: -1;
 }
 
+#step-6 {
+	z-index: -1;
+}
+
 
 .display-rec {
 	color: red;
@@ -844,6 +848,20 @@ b {
 	top: 30px;
 	font-family: Orbitron;
 	font-size: 40px;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:link {
+	color: #EE2C2C;
+}
+
+a:hover {
+	text-decoration: underline;
+	border-bottom-color: #EE2C2C;
 }
 
 /*-------------------------- Bass ---------------------------*/
