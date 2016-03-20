@@ -62,7 +62,7 @@ $(document).ready(function() {
       $("#step-one").css("z-index", 2);
       $('#pad1').addClass("step-one-pad-background");
       for (var i = 0; i < 10; i++) {
-        $('.pad' + i.toString() + '-class-key').remove();
+        $('.pad' + i.toString() + '-class-key').hide();
       }
     });
 
@@ -96,5 +96,11 @@ $(document).ready(function() {
       $('#pad9').addClass("step-five-pad-background");
     });
 
+    $("#help-icon").on("click", function(){
+      $('#pad1').addClass("step-one-pad-background");
+      for (var i = 0; i < 10; i++) {
+        $('.pad' + i.toString() + '-class-key').toggle();
+      }
+    });
 
 });

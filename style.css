@@ -192,7 +192,6 @@ table {
 	border-bottom: 2px #595657 solid;
   margin: 20px;
   height: 60px;
-	cursor: pointer;
 	background-color: #EE2C2C;
 }
 
@@ -696,6 +695,13 @@ button:focus {outline:0;}
 	margin-left: 75px;
 }
 
+#help-icon {
+	position: absolute;
+	top: 430px;
+	right: 238px;
+	cursor: pointer;
+}
+
 .volume-icon {
 	position: relative;
 	right: 100px;
@@ -797,7 +803,7 @@ b {
 }
 
 .step-four-pad-background {
-	background-color: white;
+	background-color: brown;
 }
 
 .step-five-pad-background {
