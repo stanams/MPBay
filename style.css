@@ -868,6 +868,13 @@ a:hover {
 	color: black;
 }
 
+
+.gh-button {
+	margin-left: 115px;
+	margin-right: 115px;
+	margin-top: 110px;
+}
+
 /*-------------------------- Bass ---------------------------*/
 .bass-pic {
 	height: 600px;
