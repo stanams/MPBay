@@ -10,6 +10,11 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script>
+    
+    // I don't like to not separate my concerns either. Yet, some tests have shown that embedding js in the html file
+    // improves performance. In our specific case it improves sync between the different tracks.
+    // For more infos: http://bit.ly/1SuorAw
+    
       var samples_list = [
         "kick-vinyl01",
         "snare-vinyl01",
